@@ -22,17 +22,7 @@ const routes: Routes = [
   },
   {
     path: 'fc-info',
-    component: FcInfoComponent,
-    children: [
-      {
-        path: 'rules',
-        component: FcRulesComponent
-      },
-      {
-        path: 'roles',
-        component: FcRulesComponent
-      }
-    ]
+    component: FcInfoComponent
   },
   {
     path: '**',
