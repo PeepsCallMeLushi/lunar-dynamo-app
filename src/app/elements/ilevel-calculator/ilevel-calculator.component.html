@@ -8,31 +8,31 @@
             <br>
             <mat-form-field appearance="outline" class="w-100">
                 <mat-label>Arm Item Level</mat-label>
-                <input matInput #arm>
+                <input matInput id="arm" appInputProtector inputmode="numeric" pattern="[0-9]*" [value]="iLevels.arm" (input)="getInputValue($event.target.value, $event.target.id)">
             </mat-form-field>
             <mat-form-field appearance="outline" class="w-100">
                 <mat-label>Head Item Level</mat-label>
-                <input matInput #head>
+                <input matInput id="head" appInputProtector inputmode="numeric" pattern="[0-9]*" [value]="iLevels.head" (input)="getInputValue($event.target.value, $event.target.id)">
             </mat-form-field>
             <mat-form-field appearance="outline" class="w-100">
                 <mat-label>Body Item Level</mat-label>
-                <input matInput #body>
+                <input matInput id="body" appInputProtector inputmode="numeric" pattern="[0-9]*" [value]="iLevels.body" (input)="getInputValue($event.target.value, $event.target.id)">
             </mat-form-field>
             <mat-form-field appearance="outline" class="w-100">
                 <mat-label>Hands Item Level</mat-label>
-                <input matInput #hands>
+                <input matInput id="hands" appInputProtector inputmode="numeric" pattern="[0-9]*" [value]="iLevels.hands" (input)="getInputValue($event.target.value, $event.target.id)">
             </mat-form-field>
             <mat-form-field appearance="outline" class="w-100">
                 <mat-label>Waist Item Level</mat-label>
-                <input matInput #waist>
+                <input matInput id="waist" appInputProtector inputmode="numeric" pattern="[0-9]*" [value]="iLevels.waist" (input)="getInputValue($event.target.value, $event.target.id)">
             </mat-form-field>
             <mat-form-field appearance="outline" class="w-100">
                 <mat-label>Legs Item Level</mat-label>
-                <input matInput #legs>
+                <input matInput id="legs" appInputProtector inputmode="numeric" pattern="[0-9]*" [value]="iLevels.legs" (input)="getInputValue($event.target.value, $event.target.id)">
             </mat-form-field>
             <mat-form-field appearance="outline" class="w-100">
                 <mat-label>Feet Item Level</mat-label>
-                <input matInput #feet>
+                <input matInput id="feet" appInputProtector inputmode="numeric" pattern="[0-9]*" [value]="iLevels.feet" (input)="getInputValue($event.target.value, $event.target.id)">
             </mat-form-field>
         </div>
         <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
@@ -40,36 +40,36 @@
             <br>
             <mat-form-field appearance="outline" class="w-100">
                 <mat-label>Offhand Item Level</mat-label>
-                <input matInput #offhand [disabled]="variable">
-                <button matSuffix mat-icon-button matTooltip="Click me to {{ variable ? 'unlock' : 'lock'}} the input" (click)="variable = !variable">
+                <input matInput id="offhand" appInputProtector [disabled]="!hasOffHand" inputmode="numeric" pattern="[0-9]*" [value]="iLevels.offhand" (input)="getInputValue($event.target.value, $event.target.id)">
+                <button matSuffix mat-icon-button matTooltip="Click me to {{ hasOffHand ? 'lock' : 'unlock'}} the input" (click)="controlOffHandInput()">
                     <mat-icon>
-                        {{variable ? 'lock' : 'lock_open'}}
+                        {{hasOffHand ? 'lock_open' : 'lock'}}
                     </mat-icon>
                 </button>
             </mat-form-field>
             <mat-form-field appearance="outline" class="w-100">
                 <mat-label>Earrings Item Level</mat-label>
-                <input matInput #earrings>
+                <input matInput id="earrings" appInputProtector inputmode="numeric" pattern="[0-9]*" [value]="iLevels.earrings" (input)="getInputValue($event.target.value, $event.target.id)">
             </mat-form-field>
             <mat-form-field appearance="outline" class="w-100">
                 <mat-label>Necklace Item Level</mat-label>
-                <input matInput #necklace>
+                <input matInput id="necklace" appInputProtector inputmode="numeric" pattern="[0-9]*" [value]="iLevels.necklace" (input)="getInputValue($event.target.value, $event.target.id)">
             </mat-form-field>
             <mat-form-field appearance="outline" class="w-100">
                 <mat-label>Bracelets Item Level</mat-label>
-                <input matInput #bracelets>
+                <input matInput id="bracelets" appInputProtector inputmode="numeric" pattern="[0-9]*" [value]="iLevels.bracelets" (input)="getInputValue($event.target.value, $event.target.id)">
             </mat-form-field>
             <mat-form-field appearance="outline" class="w-100">
                 <mat-label>Ring1 Item Level</mat-label>
-                <input matInput #ring1>
+                <input matInput id="ring1" appInputProtector inputmode="numeric" pattern="[0-9]*" [value]="iLevels.ring1" (input)="getInputValue($event.target.value, $event.target.id)">
             </mat-form-field>
             <mat-form-field appearance="outline" class="w-100">
                 <mat-label>Ring2 Item Level</mat-label>
-                <input matInput #ring2>
+                <input matInput id="ring2" appInputProtector inputmode="numeric" pattern="[0-9]*" [value]="iLevels.ring2" (input)="getInputValue($event.target.value, $event.target.id)">
             </mat-form-field>
             <mat-form-field appearance="outline" class="w-100">
                 <mat-label>Total Item Level</mat-label>
-                <input matInput #total disabled>
+                <input matInput id="total" [value]="totalILevel" disabled>
             </mat-form-field>
         </div>
 
@@ -88,7 +88,7 @@
                             across devices.</p>
                     </mat-card-content>
                     <mat-card-actions>
-                        I don't consent <mat-slide-toggle #consentChecker></mat-slide-toggle> I consent
+                        I don't consent <mat-slide-toggle [checked]="hasConcent" (change)="verifyConsent()" #consentChecker></mat-slide-toggle> I consent
                     </mat-card-actions>
                 </mat-card>
             </div>

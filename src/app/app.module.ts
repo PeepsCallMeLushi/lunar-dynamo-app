@@ -10,6 +10,8 @@ import { SideNavComponent } from './elements/side-nav/side-nav.component';
 import { HomeComponent } from './elements/home/home.component';
 import { IlevelCalculatorComponent } from './elements/ilevel-calculator/ilevel-calculator.component';
 import { LinksComponent } from './elements/links/links.component';
+import { FormsModule } from '@angular/forms';
+import { InputProtectorDirective } from './shared/directives/input-protector.directive';
 
 @NgModule({
   declarations: [
@@ -17,15 +19,18 @@ import { LinksComponent } from './elements/links/links.component';
     SideNavComponent,
     HomeComponent,
     IlevelCalculatorComponent,
-    LinksComponent
+    LinksComponent,
+    InputProtectorDirective
   ],
   imports: [
     SharedModule,
     AngularMaterialModule,
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule
   ],
+  exports: [],
   providers: [],
   bootstrap: [AppComponent]
 })
