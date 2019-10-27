@@ -7,12 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'lunar-dynamo-app';
-  private width: number = window.innerWidth;
+  public width: number = window.innerWidth;
 
   constructor () {
     window.addEventListener('resize', ()=>{
       this.width = window.innerWidth;
-    })
+    });
   }
 
 }
