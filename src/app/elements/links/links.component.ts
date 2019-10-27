@@ -112,8 +112,12 @@ export class LinksComponent implements OnInit {
       description: 'Shhhh, don\'t tell SE',
       links: [
         {
-          name: 'Link',
+          name: 'Mog Board',
           link: 'https://mogboard.com/'
+        },
+        {
+          name: 'Universalis',
+          link: 'https://universalis.app/'
         }
       ]
     },
@@ -127,6 +131,7 @@ export class LinksComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    console.log(window.navigator.userAgent);
   }
 
   public openLink(link:string): void {

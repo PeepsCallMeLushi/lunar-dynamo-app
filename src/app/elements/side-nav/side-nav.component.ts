@@ -19,6 +19,11 @@ export class SideNavComponent implements OnInit {
       text: 'Links',
       route: 'links',
     },
+    {
+      icon: 'description',
+      text: 'Rules',
+      route: ''
+    }
   ]
 
   constructor() { }

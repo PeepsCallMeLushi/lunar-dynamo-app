@@ -10,7 +10,7 @@
   </mat-toolbar-row>
 </mat-toolbar>
 <mat-sidenav-container fullscreen [ngStyle]="{'top': toolbar.offsetHeight + 'px'}">
-  <mat-sidenav #sideNav mode="side" [fixedInViewport]="true" [fixedTopGap]="toolbar.offsetHeight" opened>
+  <mat-sidenav #sideNav [mode]="width>=960 ? 'side':'over'" [fixedInViewport]="true" [fixedTopGap]="toolbar.offsetHeight" [opened]="false">
     <app-side-nav></app-side-nav>
   </mat-sidenav>
   <mat-sidenav-content class="app-content">

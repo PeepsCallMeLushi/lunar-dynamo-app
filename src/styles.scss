@@ -4,16 +4,16 @@ html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .app-content{
     padding: 1rem;
-    position: relative;
     .slappy-cub{
     background-image: url('./assets/259970_Lushi Slappy.gif');
     background-repeat: no-repeat;
-    height: 45%;
-    width: 30%;
-    position: absolute;
+    background-position: 100%,100%;
+    background-size: contain;
+    height: 50vmin;
+    width: 50vmin;
+    position: fixed;
     bottom: 0px;
     right: 0px;
-    top:auto;
     opacity: 5%;
     z-index: -9999999;
     }
