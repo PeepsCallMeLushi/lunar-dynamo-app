@@ -21,7 +21,7 @@ import {
     MatIconModule,
     MatButtonModule,
     MatListModule
-  ],
+    ],
   exports: [
     MatTabsModule,
     MatToolbarModule,

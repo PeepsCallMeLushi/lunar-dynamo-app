@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { SideNavElement } from 'src/app/shared/models/side-nav-element.model';
+import { MatSidenav } from '@angular/material';
 
 @Component({
   selector: 'app-side-nav',
@@ -7,6 +8,8 @@ import { SideNavElement } from 'src/app/shared/models/side-nav-element.model';
   styleUrls: ['./side-nav.component.scss']
 })
 export class SideNavComponent implements OnInit {
+
+  @Input() public inputSideNav: MatSidenav;
 
   public sideNavElements: SideNavElement[] = [
     {

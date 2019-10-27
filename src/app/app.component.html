@@ -6,12 +6,12 @@
       </mat-icon>
     </button>
     <span class="spacer"></span>
-    <img src="./assets/x-Lunar_Dynamo.png" routerLink="''" class="logo">
+    <img src="./assets/x-Lunar_Dynamo.png" routerLink="''" class="logo" (click)="sideNav.opened ? sideNav.close() : false">
   </mat-toolbar-row>
 </mat-toolbar>
 <mat-sidenav-container fullscreen [ngStyle]="{'top': toolbar.offsetHeight + 'px'}">
   <mat-sidenav #sideNav [mode]="width>=960 ? 'side':'over'" [fixedInViewport]="true" [fixedTopGap]="toolbar.offsetHeight" [opened]="false">
-    <app-side-nav></app-side-nav>
+    <app-side-nav [inputSideNav]="sideNav"></app-side-nav>
   </mat-sidenav>
   <mat-sidenav-content class="app-content">
     <router-outlet></router-outlet>

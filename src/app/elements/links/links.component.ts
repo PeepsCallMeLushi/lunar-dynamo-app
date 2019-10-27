@@ -130,9 +130,7 @@ export class LinksComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-    console.log(window.navigator.userAgent);
-  }
+  ngOnInit() { }
 
   public openLink(link:string): void {
     window.open(link, '_blank');
