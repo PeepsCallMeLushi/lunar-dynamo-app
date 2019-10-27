@@ -1,0 +1,13 @@
+<div class="container-fluid row">
+    <div *ngFor="let card of linkItems; let i = index;"  class="col-sm-12 col-md-12 col-lg-12 col-xl-3">
+        <mat-card>
+            <mat-card-header>
+                <mat-card-title>{{card.header}}</mat-card-title>
+                <mat-card-subtitle>{{card.description}}</mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-actions>
+                <button mat-button *ngFor="let links of card.links" (click)="openLink(links.link)">{{links.name}}</button>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+</div>
