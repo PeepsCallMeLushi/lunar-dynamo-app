@@ -1,1 +1,95 @@
-<h1><b><i>THIS FEATURE IS STILL A WORK IN PROGRESS!</i></b></h1>
+<div class="container-fluid">
+    <h1>FFXIV Item Level Calculator</h1>
+    <br>
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
+            <h2>Left Side Gear</h2>
+            <br>
+            <mat-form-field appearance="outline" class="w-100">
+                <mat-label>Arm Item Level</mat-label>
+                <input matInput #arm>
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="w-100">
+                <mat-label>Head Item Level</mat-label>
+                <input matInput #head>
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="w-100">
+                <mat-label>Body Item Level</mat-label>
+                <input matInput #body>
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="w-100">
+                <mat-label>Hands Item Level</mat-label>
+                <input matInput #hands>
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="w-100">
+                <mat-label>Waist Item Level</mat-label>
+                <input matInput #waist>
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="w-100">
+                <mat-label>Legs Item Level</mat-label>
+                <input matInput #legs>
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="w-100">
+                <mat-label>Feet Item Level</mat-label>
+                <input matInput #feet>
+            </mat-form-field>
+        </div>
+        <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
+            <h2>Right Side Gear</h2>
+            <br>
+            <mat-form-field appearance="outline" class="w-100">
+                <mat-label>Offhand Item Level</mat-label>
+                <input matInput #offhand [disabled]="variable">
+                <button matSuffix mat-icon-button matTooltip="Click me to {{ variable ? 'unlock' : 'lock'}} the input" (click)="variable = !variable">
+                    <mat-icon>
+                        {{variable ? 'lock' : 'lock_open'}}
+                    </mat-icon>
+                </button>
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="w-100">
+                <mat-label>Earrings Item Level</mat-label>
+                <input matInput #earrings>
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="w-100">
+                <mat-label>Necklace Item Level</mat-label>
+                <input matInput #necklace>
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="w-100">
+                <mat-label>Bracelets Item Level</mat-label>
+                <input matInput #bracelets>
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="w-100">
+                <mat-label>Ring1 Item Level</mat-label>
+                <input matInput #ring1>
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="w-100">
+                <mat-label>Ring2 Item Level</mat-label>
+                <input matInput #ring2>
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="w-100">
+                <mat-label>Total Item Level</mat-label>
+                <input matInput #total disabled>
+            </mat-form-field>
+        </div>
+
+        <div class="row">
+            <div class="col s12 m12 l12 xl12">
+                <mat-card class="w-100">
+                    <mat-card-header>
+                        <mat-card-title>Notice</mat-card-title>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <p>This tool can use your localstorage to save your item levels and quicken the process each
+                            time you access the tool. However, the tool will not use your localstorage without your
+                            consent. To save your item levels to your localstorage and give the tool your consent to
+                            use it for such purposes, simply press the switch below.</p>
+                        <p><b>NOTE:</b> This doesn't mean, in any way, that your item levels will be synchronized
+                            across devices.</p>
+                    </mat-card-content>
+                    <mat-card-actions>
+                        I don't consent <mat-slide-toggle #consentChecker></mat-slide-toggle> I consent
+                    </mat-card-actions>
+                </mat-card>
+            </div>
+        </div>
+    </div>

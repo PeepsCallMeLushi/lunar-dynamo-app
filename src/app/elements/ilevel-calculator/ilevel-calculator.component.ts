@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IlevelCalculatorComponent implements OnInit {
 
+  public variable: boolean = true;
+
   constructor() { }
 
   ngOnInit() {
