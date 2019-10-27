@@ -12,6 +12,8 @@ import { IlevelCalculatorComponent } from './elements/ilevel-calculator/ilevel-c
 import { LinksComponent } from './elements/links/links.component';
 import { FormsModule } from '@angular/forms';
 import { InputProtectorDirective } from './shared/directives/input-protector.directive';
+import { FcInfoComponent } from './elements/fc-info/fc-info.component';
+import { FcRulesComponent } from './elements/fc-info/fc-rules/fc-rules.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { InputProtectorDirective } from './shared/directives/input-protector.dir
     HomeComponent,
     IlevelCalculatorComponent,
     LinksComponent,
-    InputProtectorDirective
+    InputProtectorDirective,
+    FcInfoComponent,
+    FcRulesComponent
   ],
   imports: [
     SharedModule,

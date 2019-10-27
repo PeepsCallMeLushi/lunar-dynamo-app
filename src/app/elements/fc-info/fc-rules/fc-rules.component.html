@@ -1,0 +1,25 @@
+<mat-list>
+    <ng-container *ngFor="let r of rules">
+        <h3 mat-subheader>{{r.header}}</h3>
+        <mat-list-item *ngFor="let rs of r.rules">
+            <mat-icon mat-list-icon>{{rs.icon}}</mat-icon>
+            <h4 mat-line>{{rs.rule}}</h4>
+        </mat-list-item>
+    </ng-container>
+</mat-list>
+
+<!-- 1. Be respectful of other members, avoid racial slurs and degrading terms
+
+2. Avoid pushing your religious and/or political views/propaganda on others
+
+3. It's alright to have an opinion, it's not alright to think of it as absolute or not respect others' . Be open to
+another view and healthy discussions.
+
+4. Avoid talk behind other's back, if you have a problem with someone, try to solve it with civility. There's close to
+no room for senseless drama.
+
+5. Avoid bringing the conflict into public chat, try to solve it together. If help is needed an officer or myself can
+help.
+
+6. There's no such system as emitting X amount of warnings before an action, the outcome of a conflict is decided on the
+spot with impartiality -->

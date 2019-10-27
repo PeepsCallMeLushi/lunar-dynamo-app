@@ -25,7 +25,7 @@ export class SideNavComponent implements OnInit {
     {
       icon: 'description',
       text: 'Rules',
-      route: ''
+      route: 'fc-info/rules'
     }
   ]
 

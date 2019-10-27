@@ -3,6 +3,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './elements/home/home.component';
 import { IlevelCalculatorComponent } from './elements/ilevel-calculator/ilevel-calculator.component';
 import { LinksComponent } from './elements/links/links.component';
+import { FcInfoComponent } from './elements/fc-info/fc-info.component';
+import { FcRulesComponent } from './elements/fc-info/fc-rules/fc-rules.component';
 
 
 const routes: Routes = [
@@ -19,7 +21,21 @@ const routes: Routes = [
     component: LinksComponent
   },
   {
-    path:'**',
+    path: 'fc-info',
+    component: FcInfoComponent,
+    children: [
+      {
+        path: 'rules',
+        component: FcRulesComponent
+      },
+      {
+        path: 'roles',
+        component: FcRulesComponent
+      }
+    ]
+  },
+  {
+    path: '**',
     redirectTo: '',
   }
 ];
