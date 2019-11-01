@@ -9,6 +9,7 @@ export class FcInfoComponent implements OnInit {
   public fcRules: any[] = [
     {
       header: 'COMMUNITY RULES',
+      description:'',
       rules: [
         {
           icon: 'people_alt',
@@ -38,6 +39,7 @@ export class FcInfoComponent implements OnInit {
     },
     {
       header: 'DISCORD RULES',
+      description: '',
       rules: [
         {
           icon: 'keyboard_arrow_up',
@@ -55,6 +57,7 @@ export class FcInfoComponent implements OnInit {
     },
     {
       header: 'FFXIV SPECIFIC RULES',
+      description: '',
       rules: [
         {
           icon: 'keyboard_arrow_up',
@@ -92,6 +95,7 @@ export class FcInfoComponent implements OnInit {
     },
     {
       header: 'MEMBER MISSING RULES',
+      description: '',
       rules: [
         {
           icon: 'access_alarm',
@@ -105,7 +109,119 @@ export class FcInfoComponent implements OnInit {
     }
   ]
 
-  
+public fcRoles: any[] = [
+  {
+    header: 'Bai Hu',
+    description: '',
+    rules: [
+      {
+        icon: 'people_alt',
+        rule: 'The FC Leader',
+      },
+    ]
+  },
+  {
+    header: 'Hakutei',
+    description: '',
+    rules: [
+      {
+        icon: 'people_alt',
+        rule: 'The FC Officers',
+      },
+    ]
+  },
+  {
+    header: 'Storm Tiger',
+    description: '',
+    rules: [
+      {
+        icon: 'people_alt',
+        rule: 'The FC trusted people with almost as much power as an officer but not with as much decision power',
+      },
+    ]
+  },
+  {
+    header: 'White Tiger',
+    description: '',
+    rules: [
+      {
+        icon: 'people_alt',
+        rule: 'The FC trusted people who have been with us for a bit',
+      },
+    ]
+  },
+  {
+    header: 'Tiger Cub',
+    description: '',
+    rules: [
+      {
+        icon: 'people_alt',
+        rule: 'The FC people who have just recently joined',
+      },
+    ]
+  },
+]
+
+  public modInfo: any[] = [
+    {
+      header: 'The FC Leader, moderators and storm tigers must',
+      description: '',
+      rules: [
+        {
+          icon: 'policy',
+          rule: 'Be impartial at all times when it comes to decisions',
+        },
+        {
+          icon: 'policy',
+          rule: 'Not take a decision when they can\'t be impartial and step out in a conflict, allowing another member to intervene',
+        },
+        {
+          icon: 'policy',
+          rule: 'Take temporary action if they\'re the only ones available, if they\'re partial then their judgment must be evaluated by other officers',
+        },
+        {
+          icon: 'policy',
+          rule: 'Not be contested by anyone else besides the members involved',
+        },
+      ]
+    },
+    {
+      header: 'FC leader, officer and storm tiger decisions can',
+      description: '',
+      rules: [
+        {
+          icon: 'policy',
+          rule: 'Be contested',
+        },
+        {
+          icon: 'policy',
+          rule: 'Be overruled',
+        },
+        {
+          icon: 'policy',
+          rule: 'Be re-evaluated',
+        },
+      ]
+    },
+    {
+      header: 'FC leader decisions',
+      description: '',
+      rules: [
+        {
+          icon: 'policy',
+          rule: 'If the decision is contested, 3 officers must evaluate the decision, if it passes, it carries on, if it fails, the leader must take another decision',
+        },
+        {
+          icon: 'policy',
+          rule: 'If the decision is constantly contested but constantly passed, the FC leader must pass a final undisputed decision',
+        },
+        {
+          icon: 'policy',
+          rule: 'If the decision is constantly contested but constantly failed, the FC leader must appoint an officer and a storm tiger to decide an action instead of the leader',
+        },
+      ]
+    },
+  ]
 
   constructor() { }
 
