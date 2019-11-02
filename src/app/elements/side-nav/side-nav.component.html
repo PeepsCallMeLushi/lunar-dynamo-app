@@ -1,10 +1,12 @@
 <mat-action-list>
-        <button mat-list-item *ngFor="let element of sideNavElements" [routerLink]="element.route" (click)="inputSideNav.toggle()">
+    <button mat-list-item *ngFor="let element of sideNavElements" [routerLink]="element.route"
+        (click)="inputSideNav.toggle()" [ngStyle]="{'background-color' : url === element.route ? '#fafafa' : ''}"
+        [class.boxy-box-box]="url === element.route">
         <mat-icon mat-list-icon>
             {{element.icon}}
         </mat-icon>
         <h4 mat-line>
             {{element.text}}
         </h4>
-        </button>
+    </button>
 </mat-action-list>

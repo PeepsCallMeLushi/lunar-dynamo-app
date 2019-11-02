@@ -5,20 +5,15 @@
         menu
       </mat-icon>
     </button>
-    &nbsp;
-      <b>
-      |
-    </b>
-    &nbsp;
-    <button mat-button routerLink="''" (click)="sideNav.opened ? sideNav.close() : false">
-      Lunar Dynamo
-    </button>
-    <!-- <span class="spacer"></span>
-    <img src="./assets/x-Lunar_Dynamo.png" routerLink="''" class="logo" (click)="sideNav.opened ? sideNav.close() : false"> -->
+    <ng-container *ngIf="width >= 960; else mobileMenu">
+      <span class="spacer"></span>
+      <img src="./assets/x-Lunar_Dynamo.png" routerLink="/" class="logo" (click)="sideNav.opened ? sideNav.close() : false">
+    </ng-container>
   </mat-toolbar-row>
 </mat-toolbar>
 <mat-sidenav-container fullscreen [ngStyle]="{'top': toolbar.offsetHeight + 'px'}">
-  <mat-sidenav #sideNav [mode]="width>=960 ? 'side':'over'" [fixedInViewport]="true" [fixedTopGap]="toolbar.offsetHeight" [opened]="false">
+  <mat-sidenav #sideNav [mode]="width>=960 ? 'side':'over'" [fixedInViewport]="true"
+    [fixedTopGap]="toolbar.offsetHeight" [opened]="false">
     <app-side-nav [inputSideNav]="sideNav"></app-side-nav>
   </mat-sidenav>
   <mat-sidenav-content class="app-content">
@@ -26,3 +21,14 @@
     <div class="slappy-cub"></div>
   </mat-sidenav-content>
 </mat-sidenav-container>
+
+<ng-template #mobileMenu>
+  &nbsp;
+  <b>
+    |
+  </b>
+  &nbsp;
+  <button mat-button routerLink="/" (click)="sideNav.opened ? sideNav.close() : false">
+    Lunar Dynamo
+  </button>
+</ng-template>
