@@ -4,7 +4,7 @@ import { HomeComponent } from './elements/home/home.component';
 import { IlevelCalculatorComponent } from './elements/ilevel-calculator/ilevel-calculator.component';
 import { LinksComponent } from './elements/links/links.component';
 import { FcInfoComponent } from './elements/fc-info/fc-info.component';
-import { FcRulesComponent } from './elements/fc-info/fc-rules/fc-rules.component';
+import { AboutComponent } from './elements/about/about.component';
 
 
 const routes: Routes = [
@@ -23,6 +23,10 @@ const routes: Routes = [
   {
     path: 'fc-info',
     component: FcInfoComponent
+  },
+  {
+    path: 'about',
+    component: AboutComponent
   },
   {
     path: '**',

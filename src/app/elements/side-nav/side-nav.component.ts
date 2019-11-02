@@ -33,6 +33,11 @@ export class SideNavComponent implements OnInit {
       icon: 'description',
       text: 'Rules',
       route: '/fc-info'
+    },
+    {
+      icon: 'supervised_user_circle',
+      text: 'About',
+      route: '/about'
     }
   ]
 

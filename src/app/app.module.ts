@@ -14,6 +14,9 @@ import { FormsModule } from '@angular/forms';
 import { InputProtectorDirective } from './shared/directives/input-protector.directive';
 import { FcInfoComponent } from './elements/fc-info/fc-info.component';
 import { FcRulesComponent } from './elements/fc-info/fc-rules/fc-rules.component';
+import { AboutComponent } from './elements/about/about.component';
+import { BigPictureComponent } from './elements/about/big-picture/big-picture.component';
+import { MAT_DIALOG_DEFAULT_OPTIONS } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -24,7 +27,9 @@ import { FcRulesComponent } from './elements/fc-info/fc-rules/fc-rules.component
     LinksComponent,
     InputProtectorDirective,
     FcInfoComponent,
-    FcRulesComponent
+    FcRulesComponent,
+    AboutComponent,
+    BigPictureComponent
   ],
   imports: [
     SharedModule,
@@ -34,8 +39,14 @@ import { FcRulesComponent } from './elements/fc-info/fc-rules/fc-rules.component
     BrowserAnimationsModule,
     FormsModule
   ],
+  entryComponents: [
+    BigPictureComponent
+  ],
   exports: [],
-  providers: [],
+  providers: [
+    AppComponent,
+    { provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: { hasBackdrop: true } }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

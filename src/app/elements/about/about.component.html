@@ -1,0 +1,21 @@
+<div class="container-fluid row">
+    <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3" *ngFor="let info of aboutInfo">
+        <mat-card>
+            <mat-card-header>
+                <mat-card-title>{{info.name}}</mat-card-title>
+            </mat-card-header>
+            <img mat-card-image [src]="info.img" (click)="openImage(info.realImg)">
+            <mat-card-content>
+                <p>
+                    {{info.desc}}
+                </p>
+            </mat-card-content>
+            <mat-card-actions>
+                <ng-container *ngFor="let button of info.buttons">
+                    <button mat-button (click)="openLink(button.link)">{{button.sm}}</button>
+                </ng-container>
+            </mat-card-actions>
+        </mat-card>
+        <br>
+    </div>
+</div>
