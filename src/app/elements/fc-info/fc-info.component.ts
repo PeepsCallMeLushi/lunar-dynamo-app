@@ -234,15 +234,15 @@ export class FcInfoComponent implements OnInit {
         },
         {
           icon: 'policy',
-          rule: 'If help is needed to unlock the content for an event, please ask for said help before the event starts, we can even organise a day dedicated to only UNLOCKING the content',
+          rule: '(BEFORE THE DAY OF THE EVENT) If help is needed to unlock the content for an event, please ask for said help before the day when event starts, we can even organise a day dedicated to only UNLOCKING the content',
         },
         {
           icon: 'policy',
-          rule: 'If members forget to unlock the content and unlocking can prove to be lenghty or otherwise cause the event to be severely delayed, the member can be left behind',
+          rule: '(ON THE DAY OF THE EVENT) If members forget to unlock the content and unlocking can prove to be lengthy or otherwise cause the event to be severely delayed, the member can be left behind',
         },
         {
           icon: 'policy',
-          rule: 'If the majority agrees to, even during event time content can be unlocked for memebers that forgot to unlocking it',
+          rule: 'If the majority agrees to, even during event time content can be unlocked for members that forgot to unlocking it',
         },
         {
           icon: 'policy',
