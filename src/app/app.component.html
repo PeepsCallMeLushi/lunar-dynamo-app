@@ -5,8 +5,16 @@
         menu
       </mat-icon>
     </button>
-    <span class="spacer"></span>
-    <img src="./assets/x-Lunar_Dynamo.png" routerLink="''" class="logo" (click)="sideNav.opened ? sideNav.close() : false">
+    &nbsp;
+      <b>
+      |
+    </b>
+    &nbsp;
+    <button mat-button routerLink="''" (click)="sideNav.opened ? sideNav.close() : false">
+      Lunar Dynamo
+    </button>
+    <!-- <span class="spacer"></span>
+    <img src="./assets/x-Lunar_Dynamo.png" routerLink="''" class="logo" (click)="sideNav.opened ? sideNav.close() : false"> -->
   </mat-toolbar-row>
 </mat-toolbar>
 <mat-sidenav-container fullscreen [ngStyle]="{'top': toolbar.offsetHeight + 'px'}">

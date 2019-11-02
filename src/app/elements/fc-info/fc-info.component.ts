@@ -109,58 +109,58 @@ export class FcInfoComponent implements OnInit {
     }
   ]
 
-public fcRoles: any[] = [
-  {
-    header: 'Bai Hu',
-    description: '',
-    rules: [
-      {
-        icon: 'people_alt',
-        rule: 'The FC Leader',
-      },
-    ]
-  },
-  {
-    header: 'Hakutei',
-    description: '',
-    rules: [
-      {
-        icon: 'people_alt',
-        rule: 'The FC Officers',
-      },
-    ]
-  },
-  {
-    header: 'Storm Tiger',
-    description: '',
-    rules: [
-      {
-        icon: 'people_alt',
-        rule: 'The FC trusted people with almost as much power as an officer but not with as much decision power',
-      },
-    ]
-  },
-  {
-    header: 'White Tiger',
-    description: '',
-    rules: [
-      {
-        icon: 'people_alt',
-        rule: 'The FC trusted people who have been with us for a bit',
-      },
-    ]
-  },
-  {
-    header: 'Tiger Cub',
-    description: '',
-    rules: [
-      {
-        icon: 'people_alt',
-        rule: 'The FC people who have just recently joined',
-      },
-    ]
-  },
-]
+  public fcRoles: any[] = [
+    {
+      header: 'Bai Hu',
+      description: '',
+      rules: [
+        {
+          icon: 'people_alt',
+          rule: 'The FC Leader',
+        },
+      ]
+    },
+    {
+      header: 'Hakutei',
+      description: '',
+      rules: [
+        {
+          icon: 'people_alt',
+          rule: 'The FC Officers',
+        },
+      ]
+    },
+    {
+      header: 'Storm Tiger',
+      description: '',
+      rules: [
+        {
+          icon: 'people_alt',
+          rule: 'The FC trusted people with almost as much power as an officer but not with as much decision power',
+        },
+      ]
+    },
+    {
+      header: 'White Tiger',
+      description: '',
+      rules: [
+        {
+          icon: 'people_alt',
+          rule: 'The FC trusted people who have been with us for a bit',
+        },
+      ]
+    },
+    {
+      header: 'Tiger Cub',
+      description: '',
+      rules: [
+        {
+          icon: 'people_alt',
+          rule: 'The FC people who have just recently joined',
+        },
+      ]
+    },
+  ]
 
   public modInfo: any[] = [
     {
@@ -219,6 +219,54 @@ public fcRoles: any[] = [
           icon: 'policy',
           rule: 'If the decision is constantly contested but constantly failed, the FC leader must appoint an officer and a storm tiger to decide an action instead of the leader',
         },
+      ]
+    },
+  ]
+
+  public eventRules: any[] = [
+    {
+      header: 'Event pre-requisits',
+      description: '',
+      rules: [
+        {
+          icon: 'policy',
+          rule: 'Please have the event\'s content requisits met before attending the event (E.G. Sephirot (EXTREME), have the item Level necessary, content unlocked and ready to enter)',
+        },
+        {
+          icon: 'policy',
+          rule: 'If help is needed to unlock the content for an event, please ask for said help before the event starts, we can even organise a day dedicated to only UNLOCKING the content',
+        },
+        {
+          icon: 'policy',
+          rule: 'If members forget to unlock the content and unlocking can prove to be lenghty or otherwise cause the event to be severely delayed, the member can be left behind',
+        },
+        {
+          icon: 'policy',
+          rule: 'If the majority agrees to, even during event time content can be unlocked for memebers that forgot to unlocking it',
+        },
+        {
+          icon: 'policy',
+          rule: 'Not being able to meet the requisits before the event due to irl issues (however they may be) is understandable, forgetfulness not so much, lazyness isn\'t understandable at all',
+        },
+
+        {
+          icon: 'policy',
+          rule: '(MAPS ONLY) Everyone must bring at least a map, unless the group has stated that it\'s alright to not have brought one (Please ask first)',
+        },
+      ]
+    },
+    {
+      header: 'Event looting',
+      description: '',
+      rules: [
+        {
+          icon: 'policy',
+          rule: '(TRIALS AND RAIDS) Everyone is allowed to roll for anything unless it was otherwise stated (like farming a gear piece for a specific member)',
+        },
+        {
+          icon: 'policy',
+          rule: '(MAPS ONLY) Default rule is for everyone to be allowed to roll, but if it is agreed to be owner only then it\'ll be applied to every map of that group',
+        }
       ]
     },
   ]
