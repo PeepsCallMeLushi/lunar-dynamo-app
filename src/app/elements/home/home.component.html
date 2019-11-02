@@ -1,1 +1,28 @@
-<h1><b><i>THIS FEATURE IS STILL A WORK IN PROGRESS!</i></b></h1>
+<div class="text-center">
+    <p>
+        <cite>
+            Welcome to Lunar Dynamo's page, why not start out with one of the links below?
+        </cite>
+    </p>
+</div>
+<br>
+<br>
+<br>
+<div class="container-fluid row">
+    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12" *ngFor="let element of sideNavElements">
+        <mat-card class="example-card" (click)="openLink(element.route)">
+            <mat-card-header>
+                <div mat-card-avatar>
+                    <mat-icon>{{element.icon}}</mat-icon>
+                </div>
+                <mat-card-title>{{element.text}}</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <p>
+                    {{element.desc}}
+                </p>
+            </mat-card-content>
+        </mat-card>
+        <br>
+    </div>
+</div>
